@@ -1,7 +1,11 @@
 var List = require('complex-list');
 
+function trueReturner(){
+  return true;
+}
+
 function FIFO(){
-  List.call(this);
+  List.call(this,trueReturner);
   this.tail = this.head;
 }
 FIFO.prototype = Object.create(List.prototype,{constructor:{
